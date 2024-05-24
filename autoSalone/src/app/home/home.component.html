@@ -1,0 +1,19 @@
+<h1 class="text-center">BENVENUTI NEL NOSTRO SALONE</h1>
+
+<div class="row">
+  <div class="col">
+    <div *ngFor="let car of filteredCars">
+      <img [src]="car.brandLogo" />
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card" *ngFor="let car of randomCar">
+      <img [src]="car.modelImage" width="100px" [alt]="car.model" />
+      <div class="card-body">
+        <h5 class="card-title">{{ car.brand }}</h5>
+        <p class="card-text">{{ car.model }}</p>
+      </div>
+    </div>
+  </div>
+</div>
