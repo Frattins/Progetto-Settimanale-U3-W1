@@ -26,8 +26,8 @@
           class="col-12 col-md-6 col-lg-4 card m-4"
           *ngFor="let car of randomCar"
           [ngClass]="{
-            'border-3 border-success': car.available,
-            'border-2 border-danger': !car.available
+            'border-3 border-primary bg-success': car.available,
+            'border-2 border-danger bg-secondary': !car.available
           }"
         >
           <img

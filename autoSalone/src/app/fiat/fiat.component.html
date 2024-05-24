@@ -1,7 +1,7 @@
 <h3 class="text-center">LE NOSTRE FIAT</h3>
 <div class="row">
   <!-- Colonna sinistra con loghi -->
-  <div class="col-md-2 d-flex flex-column">
+  <div class="col-md-2 d-md-flex d-none flex-column">
     <div *ngFor="let car of getFiatCars().slice(0)">
       <img [src]="car.brandLogo" width="100%" height="100%" [alt]="car.brand" />
     </div>
@@ -14,8 +14,8 @@
           class="col-12 col-md-6 col-lg-4 card m-4"
           *ngFor="let car of getFiatCars()"
           [ngClass]="{
-            'border-3 border-success': car.available,
-            'border-2 border-danger': !car.available
+            'border-3 border-primary bg-success': car.available,
+            'border-2 border-danger bg-secondary': !car.available
           }"
         >
           <img
@@ -26,7 +26,8 @@
           />
           <div class="card-body">
             <h5 class="card-title">{{ car.brand }}</h5>
-            <p class="card-text">{{ car.model }}</p>
+            <p class="card-text">Modello : {{ car.model }}</p>
+            <p class="card-text">prezzo : {{ car.price }}</p>
             <p class="card-text">disponibile: {{ car.available }}</p>
             <p></p>
           </div>
@@ -35,7 +36,7 @@
     </div>
   </div>
   <!-- Colonna destra con loghi -->
-  <div class="col-md-2 d-flex flex-column">
+  <div class="col-md-2 d-md-flex d-none flex-column">
     <div *ngFor="let car of getFiatCars().slice(0)">
       <img [src]="car.brandLogo" width="100%" height="100%" [alt]="car.brand" />
     </div>
