@@ -10,12 +10,12 @@ export class HomeComponent implements OnInit {
 
   carArr: iCar[] = [];
   randomCar: iCar[] = [];
-  filteredCars: iCar[] = [];
+  threeCarModels: iCar[] = [];
 
   ngOnInit() {
     this.getCar().then(() => {
       this.randomCar = this.getRandomCar();
-      this.filteredCars = this.getFilteredCars();
+      this.threeCarModels = this.getThreeCarModels();
     });
   }
 
@@ -30,9 +30,18 @@ export class HomeComponent implements OnInit {
     return shuffled.slice(0, 2);
   }
 
-  getFilteredCars(): iCar[] {
-    return this.carArr.filter(car =>
-      car.brand === 'Fiat' || car.brand === 'Audi' || car.brand === 'Ford'
-    );
+  getThreeCarModels(): iCar[] {
+    const uniqueBrands = new Map<string, iCar>();
+    for (const car of this.carArr) {
+      if (!uniqueBrands.has(car.brand)) {
+        uniqueBrands.set(car.brand, car);
+      }
+      if (uniqueBrands.size === 3) {
+        break;
+      }
+    }
+    return Array.from(uniqueBrands.values());
   }
+
+
 }

@@ -8,8 +8,8 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'/home',//redireziona l'utente
-    pathMatch: 'full'//per far si che il path vuoto venga riconosciuto correttamente
+    redirectTo:'/home',
+    pathMatch: 'full'
   },
   {
     path:'home',

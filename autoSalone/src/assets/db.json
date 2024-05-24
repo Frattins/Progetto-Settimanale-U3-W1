@@ -1,56 +1,56 @@
 [
-    {
-        "brand": "Fiat",
-        "brandLogo": "https://picsum.photos/100/100?random=7",
-        "model": "500L",
-        "modelImage": "https://picsum.photos/200/300?random=1",
-        "year": 2015,
-        "price": 7500,
-        "available": false
-    },
-    {
-        "brand": "Fiat",
-        "brandLogo": "https://picsum.photos/100/100?random=7",
-        "model": "500 Abarth",
-        "modelImage": "https://picsum.photos/200/300?random=2",
-        "year": 2010,
-        "price": 3500,
-        "available": true
-    },
-    {
-        "brand": "Ford",
-        "brandLogo": "https://picsum.photos/100/100?random=8",
-        "model": "Taurus",
-        "modelImage": "https://picsum.photos/200/300?random=3",
-        "year": 2009,
-        "price": 5200,
-        "available": false
-    },
-    {
-        "brand": "Ford",
-        "brandLogo": "https://picsum.photos/100/100?random=8",
-        "model": "Focus",
-        "modelImage": "https://picsum.photos/200/300?random=4",
-        "year": 2014,
-        "price": 9700,
-        "available": true
-    },
-    {
-        "brand": "Audi",
-        "brandLogo": "https://picsum.photos/100/100?random=9",
-        "model": "A3",
-        "modelImage": "https://picsum.photos/200/300?random=5",
-        "year": 2012,
-        "price": 4300,
-        "available": true
-    },
-    {
-        "brand": "Audi",
-        "brandLogo": "https://picsum.photos/100/100?random=9",
-        "model": "Q7",
-        "modelImage": "https://picsum.photos/200/300?random=6",
-        "year": 2020,
-        "price": 41700,
-        "available": false
-    }
+  {
+      "brand": "Fiat",
+      "brandLogo": "https://www.brandforum.it/wp-content/uploads/2019/03/40820191021015937.jpg",
+      "model": "500L",
+      "modelImage": "https://immagini.alvolante.it/sites/default/files/styles/anteprima_970/public/news_galleria/2017/05/fiat-500l-2017-restyling_14.jpg?itok=g7u_IqEH",
+      "year": 2015,
+      "price": 7500,
+      "available": false
+  },
+  {
+      "brand": "Fiat",
+      "brandLogo": "https://m.media-amazon.com/images/I/71Lq7UjirOL._AC_UF1000,1000_QL80_.jpg",
+      "model": "500 Abarth",
+      "modelImage": "https://www.federacing.it/wordpress/wp-content/uploads/2019/03/elaborazione-500-abarth-e1552570167575.jpg",
+      "year": 2010,
+      "price": 3500,
+      "available": true
+  },
+  {
+      "brand": "Ford",
+      "brandLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/200px-Ford_logo_flat.svg.png",
+      "model": "Taurus",
+      "modelImage": "https://edgecast-img.yahoo.net/mysterio/api/5D275573160A9E537BC5FB41C98DB2C13C6EA7ADEBAAD2864F2B17C5DFF7171F/autoblog/resizefill_w264_h149;quality_80;format_webp;cc_31536000;/https://s.aolcdn.com/commerce/autodata/images/USC60FOC072C021001.jpg",
+      "year": 2009,
+      "price": 5200,
+      "available": false
+  },
+  {
+      "brand": "Ford",
+      "brandLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/200px-Ford_logo_flat.svg.png",
+      "model": "Focus",
+      "modelImage": "https://cdn.wheel-size.com/thumbs/65/0c/650c354ddfc5ef8cf6b143c63682d573.jpg",
+      "year": 2014,
+      "price": 9700,
+      "available": true
+  },
+  {
+      "brand": "Audi",
+      "brandLogo": "https://www.salvatorepumo.it/wp-content/uploads/2022/01/logo-audi-oggi.png",
+      "model": "A3",
+      "modelImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4k8c1dhftkKODjgD2FiG7ukarbgvTO9verbZpyD_8qg&s",
+      "year": 2012,
+      "price": 4300,
+      "available": true
+  },
+  {
+      "brand": "Audi",
+      "brandLogo": "https://www.salvatorepumo.it/wp-content/uploads/2022/01/logo-audi-oggi.png",
+      "model": "Q7",
+      "modelImage": "https://i2.res.24o.it/images2010/Editrice/ILSOLE24ORE/ILSOLE24ORE/Online/Immagini/ArticleGallery/Motori/2022/02/Ritagli/01%20audi%20q7-kpMI--1020x533@IlSole24Ore-Web.jpg",
+      "year": 2020,
+      "price": 41700,
+      "available": false
+  }
 ]

@@ -1,18 +1,41 @@
 <h1 class="text-center">BENVENUTI NEL NOSTRO SALONE</h1>
 
-<div class="row">
-  <div class="col">
-    <div *ngFor="let car of filteredCars">
-      <img [src]="car.brandLogo" />
+<div class="container my-5">
+  <div class="row">
+    <div class="col-3 logos">
+      <div *ngIf="threeCarModels.length === 3">
+        <div *ngFor="let car of threeCarModels" class="logo-container">
+          <a [routerLink]="['/', car.brand.toLowerCase()]">
+            <img
+              [src]="car.brandLogo"
+              [alt]="car.model"
+              width="100"
+              height="100"
+            />
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="col">
-    <div class="card" *ngFor="let car of randomCar">
-      <img [src]="car.modelImage" width="100px" [alt]="car.model" />
-      <div class="card-body">
-        <h5 class="card-title">{{ car.brand }}</h5>
-        <p class="card-text">{{ car.model }}</p>
+    <div class="col-9 cards">
+      <div
+        class="card m-4"
+        *ngFor="let car of randomCar"
+        [ngClass]="{
+          available: car.available,
+          'not-available': !car.available
+        }"
+      >
+        <img [src]="car.modelImage" class="card-img-top" [alt]="car.model" />
+        <div class="card-body">
+          <h5 class="card-title">{{ car.brand }}</h5>
+          <p class="card-text">{{ car.model }}</p>
+          <a
+            [routerLink]="['/', car.brand.toLowerCase()]"
+            class="btn btn-primary"
+            >Altre auto di {{ car.brand }}</a
+          >
+        </div>
       </div>
     </div>
   </div>
