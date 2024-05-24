@@ -1,5 +1,8 @@
-<app-navbar></app-navbar>
+<div class="d-flex flex-column min-vh-100">
+  <app-navbar></app-navbar>
+  <body class="flex-grow-1">
+    <router-outlet></router-outlet>
+  </body>
 
-<router-outlet></router-outlet>
-
-<app-footer></app-footer>
+  <app-footer></app-footer>
+</div>

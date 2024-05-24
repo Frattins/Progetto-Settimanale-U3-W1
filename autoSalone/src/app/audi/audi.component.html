@@ -1,11 +1,27 @@
-<h3>LE NOSTRE AUDI</h3>
-<div id="postinevidenza" *ngFor="let p of getAudiCars()">
-  <div class="card">
-    <div class="card-body">
-      <img src="{{ p.modelImage }}" alt="" />
-      <h5 class="card-title">{{ p.model }}</h5>
-      <p class="card-text">{{ p.year }}</p>
-      <p class="card-text">{{ p.price }}</p>
+<h3 class="text-center">LE NOSTRE AUDI</h3>
+
+<div class="col cards">
+  <div class="row justify-content-center">
+    <div
+      class="col-12 col-md-6 col-lg-4 card m-4"
+      *ngFor="let car of getAudiCars()"
+      [ngClass]="{
+        'border-3 border-success': car.available,
+        'border-2 border-danger': !car.available
+      }"
+    >
+      <img
+        [src]="car.modelImage"
+        class="card-img-top"
+        height="300px"
+        [alt]="car.model"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ car.brand }}</h5>
+        <p class="card-text">{{ car.model }}</p>
+        <p class="card-text">disponibile: {{ car.available }}</p>
+        <p></p>
+      </div>
     </div>
   </div>
 </div>

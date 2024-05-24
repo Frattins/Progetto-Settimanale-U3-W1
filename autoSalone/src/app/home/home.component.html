@@ -1,12 +1,14 @@
 <h1 class="text-center">BENVENUTI NEL NOSTRO SALONE</h1>
 
-<div class="container my-5">
-  <div class="row">
-    <div class="col-3 logos">
+<div class="container d-flex flex-column align-items-center p-3 my-5">
+  <div class="row d-flex mt-3">
+    <div class="col-3 d-flex flex-column align-items-center">
+      <h2 class="text-center mb-3">I NOSTRI MODELLI</h2>
       <div *ngIf="threeCarModels.length === 3">
-        <div *ngFor="let car of threeCarModels" class="logo-container">
+        <div *ngFor="let car of threeCarModels" class="mb-5">
           <a [routerLink]="['/', car.brand.toLowerCase()]">
             <img
+              class="loghi"
               [src]="car.brandLogo"
               [alt]="car.model"
               width="100"
@@ -17,24 +19,35 @@
       </div>
     </div>
 
-    <div class="col-9 cards">
-      <div
-        class="card m-4"
-        *ngFor="let car of randomCar"
-        [ngClass]="{
-          available: car.available,
-          'not-available': !car.available
-        }"
-      >
-        <img [src]="car.modelImage" class="card-img-top" [alt]="car.model" />
-        <div class="card-body">
-          <h5 class="card-title">{{ car.brand }}</h5>
-          <p class="card-text">{{ car.model }}</p>
-          <a
-            [routerLink]="['/', car.brand.toLowerCase()]"
-            class="btn btn-primary"
-            >Altre auto di {{ car.brand }}</a
-          >
+    <div class="col-9 d-flex flex-wrap justify-content-center">
+      <h2 class="text-center mb-3">IN VETRINA (SOLO PER POCO)</h2>
+      <div class="row justify-content-center">
+        <div
+          class="col-12 col-md-6 col-lg-4 card m-4"
+          *ngFor="let car of randomCar"
+          [ngClass]="{
+            'border-3 border-success': car.available,
+            'border-2 border-danger': !car.available
+          }"
+        >
+          <img
+            [src]="car.modelImage"
+            class="card-img-top"
+            height="200px"
+            [alt]="car.model"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ car.brand }}</h5>
+            <p class="card-text">Modello : {{ car.model }}</p>
+            <p class="card-text">prezzo : {{ car.price }}</p>
+            <p class="card-text">disponibile: {{ car.available }}</p>
+            <a
+              [routerLink]="['/', car.brand.toLowerCase()]"
+              class="btn btn-primary"
+              >Altre auto di {{ car.brand }}</a
+            >
+            <p></p>
+          </div>
         </div>
       </div>
     </div>
